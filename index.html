@@ -244,6 +244,47 @@
             font-size: 0.8rem;
             text-align: center;
         }
+
+        /* 교통편 정보 */
+        .transport-info {
+            margin-top: 40px;
+            text-align: left;
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .transport-item {
+            margin-bottom: 20px;
+        }
+
+        .transport-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .transport-title {
+            font-weight: bold;
+            color: #a68d7a;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+        }
+
+        .transport-title i {
+            margin-right: 5px;
+        }
+
+        .transport-desc {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.6;
+            word-break: keep-all;
+        }
+
+        .transport-desc strong {
+            color: #333;
+        }
     </style>
 </head>
 
@@ -284,6 +325,27 @@
             <div class="map-buttons">
                 <a href="https://map.kakao.com/link/to/서울대학교 교수회관,37.4593,126.9535" class="btn" target="_blank">카카오맵</a>
                 <a href="https://map.naver.com/v5/search/서울대학교교수회관" class="btn" target="_blank">네이버 지도</a>
+            </div>
+
+            <div class="transport-info">
+                <div class="transport-item">
+                    <div class="transport-title">🚌 대중교통 이용 시</div>
+                    <div class="transport-desc">
+                        <strong>2호선 서울대입구역 3번 출구</strong><br>
+                        - 버스 <strong>5511</strong> 탑승 → '관악사삼거리/기초과학공동기기원' 하차<br>
+                        - 버스 <strong>5513</strong> 탑승 → '관악사삼거리' 하차<br><br>
+                        <strong>2호선 낙성대역 4번 출구</strong> (제과점 앞)<br>
+                        - 마을버스 <strong>관악02</strong> 탑승 → '노천강당/기초과학공동기기원' 하차
+                    </div>
+                </div>
+                <div class="transport-item">
+                    <div class="transport-title">🚗 자가용 이용 시</div>
+                    <div class="transport-desc">
+                        네비게이션에 <strong>"서울대학교 교수회관"</strong> 검색<br>
+                        (관악구 관악로 1 65동)<br>
+                        ※ 교수회관 전용 주차장 이용 가능
+                    </div>
+                </div>
             </div>
         </section>
 
