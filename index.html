@@ -10,6 +10,9 @@
     <title>최재웅 & 윤소라 결혼합니다</title>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -54,11 +57,45 @@
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
         }
 
-        .main-text h1 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4.5rem;
+            margin-bottom: 0;
             font-weight: 400;
-            letter-spacing: 5px;
+            color: #fff;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+
+        .invitation-info {
+            margin-bottom: 40px;
+        }
+
+        .invitation-names {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #555;
+            font-weight: 300;
+        }
+
+        .invitation-date-place {
+            font-size: 0.9rem;
+            color: #777;
+            letter-spacing: 1px;
+            line-height: 1.8;
         }
 
         h2 {
@@ -293,12 +330,18 @@
     <div class="container">
         <section class="main-visual">
             <div class="main-text">
-                <h1>최재웅 & 윤소라</h1>
-                <p>2026. 04. 19. SUN PM 5:00<br>서울대학교 교수회관 야외웨딩</p>
+                <h1 class="main-title">Wedding</h1>
             </div>
         </section>
 
         <section class="invitation">
+            <div class="invitation-info">
+                <div class="invitation-names">최재웅 & 윤소라</div>
+                <div class="invitation-date-place">
+                    2026. 04. 19. SUN PM 5:00<br>
+                    서울대학교 교수회관 야외웨딩
+                </div>
+            </div>
             <h2>INVITATION</h2>
             <p>꽃향기 가득한 4월의 어느 날,<br>
                 저희 두 사람이 평생을 약속하려 합니다.<br><br>
