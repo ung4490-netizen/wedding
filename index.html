@@ -4,10 +4,11 @@
 <head>
     <meta property="og:title" content="최재웅 & 윤소라 결혼합니다">
     <meta property="og:description" content="2026년 4월 19일 오후 5시, 서울대 교수회관">
-    <meta property="og:image" content="사용할메인사진주소">
+    <meta property="og:image" content="https://ung4490-netizen.github.io/wedding/main.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>최재웅 & 윤소라 결혼합니다</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -15,12 +16,12 @@
         }
 
         body {
-            font-family: 'Nanum Myeongjo', serif;
+            font-family: 'Nanum Gothic', sans-serif;
             margin: 0;
             padding: 0;
             color: #444;
-            line-height: 1.8;
-            background: #f4f4f4;
+            line-height: 1.6;
+            background: #fdfaf7;
         }
 
         .container {
@@ -42,15 +43,15 @@
             height: 550px;
             background: url('main.jpg') center/cover no-repeat;
             display: flex;
-            align-items: flex-end;
+            align-items: flex-start;
             justify-content: center;
-            padding-bottom: 50px;
+            padding-top: 150px;
         }
 
         .main-text {
             text-align: center;
             color: #fff;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
         }
 
         .main-text h1 {
@@ -156,7 +157,7 @@
 
         /* 연락처 */
         .contact-sec {
-            background-color: #fff;
+            background-color: #fdfaf7;
             padding-bottom: 20px;
         }
 
@@ -234,7 +235,6 @@
             border: 1px solid #e2d9d0;
         }
 
-
         footer {
             padding: 40px 0;
             background: #fff;
@@ -255,21 +255,21 @@
             </div>
         </section>
 
-        <section>
+        <section class="invitation">
             <h2>INVITATION</h2>
             <p>꽃향기 가득한 4월의 어느 날,<br>
-                재웅과 소라, 저희 두 사람이 평생을 약속하려 합니다.<br><br>
-                눈부신 햇살 아래서 맺는 저희의 약속에<br>
+                저희 두 사람이 평생을 약속하려 합니다.<br><br>
+                따뜻한 봄날 저녁, 저희의 새로운 시작을<br>
                 귀한 걸음 하시어 축복해 주시면 감사하겠습니다.</p>
         </section>
 
         <section class="gallery-sec">
             <h2>GALLERY</h2>
             <div class="gallery">
-                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=500&q=80" alt="photo1.jpg">
-                <img src="https://images.unsplash.com/photo-1596637513259-2228556900f7?w=500&q=80" alt="photo2.jpg">
-                <img src="https://images.unsplash.com/photo-1511285560929-80b456fe0e2f?w=500&q=80" alt="photo3.jpg">
-                <img src="https://images.unsplash.com/photo-1507504031982-849130b83f32?w=500&q=80" alt="photo4.jpg">
+                <img src="photo1.jpg">
+                <img src="photo2.jpg">
+                <img src="photo3.jpg">
+                <img src="photo4.jpg">
             </div>
         </section>
 
@@ -348,29 +348,47 @@
 
             <div class="account-group-title">신랑측</div>
             <div class="account-box">
-                <div class="account-info"><strong>신랑 최재웅</strong><br>신한 110-123-456789</div>
+                <div class="account-info">
+                    <span class="contact-role">신랑</span><span class="contact-name">최재웅</span><br>
+                    신한 110-123-456789
+                </div>
                 <button class="copy-btn" onclick="copyAccount('110123456789')">복사</button>
             </div>
             <div class="account-box">
-                <div class="account-info"><strong>부 최성대</strong><br>번호를 입력해주세요</div>
+                <div class="account-info">
+                    <span class="contact-role">아버지</span><span class="contact-name">최성대</span><br>
+                    번호를 입력해주세요
+                </div>
                 <button class="copy-btn" onclick="copyAccount('000')">복사</button>
             </div>
             <div class="account-box">
-                <div class="account-info"><strong>모 이경자</strong><br>번호를 입력해주세요</div>
+                <div class="account-info">
+                    <span class="contact-role">어머니</span><span class="contact-name">이경자</span><br>
+                    번호를 입력해주세요
+                </div>
                 <button class="copy-btn" onclick="copyAccount('000')">복사</button>
             </div>
 
             <div class="account-group-title">신부측</div>
             <div class="account-box">
-                <div class="account-info"><strong>신부 윤소라</strong><br>국민 010-1234-5678</div>
+                <div class="account-info">
+                    <span class="contact-role">신부</span><span class="contact-name">윤소라</span><br>
+                    국민 010-1234-5678
+                </div>
                 <button class="copy-btn" onclick="copyAccount('01012345678')">복사</button>
             </div>
             <div class="account-box">
-                <div class="account-info"><strong>부 윤기백</strong><br>번호를 입력해주세요</div>
+                <div class="account-info">
+                    <span class="contact-role">아버지</span><span class="contact-name">윤기백</span><br>
+                    번호를 입력해주세요
+                </div>
                 <button class="copy-btn" onclick="copyAccount('000')">복사</button>
             </div>
             <div class="account-box">
-                <div class="account-info"><strong>모 박혜영</strong><br>번호를 입력해주세요</div>
+                <div class="account-info">
+                    <span class="contact-role">어머니</span><span class="contact-name">박혜영</span><br>
+                    번호를 입력해주세요
+                </div>
                 <button class="copy-btn" onclick="copyAccount('000')">복사</button>
             </div>
         </section>
@@ -391,5 +409,3 @@
 </body>
 
 </html>
-
-
