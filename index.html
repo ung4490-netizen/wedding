@@ -1,155 +1,393 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta property="og:title" content="최재웅 & 윤소라 결혼합니다">
     <meta property="og:description" content="2026년 4월 19일 오후 5시, 서울대 교수회관">
-    <meta property="og:image" content="https://ung4490-netizen.github.io/wedding/main.jpg">
+    <meta property="og:image" content="사용할메인사진주소">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>최재웅 & 윤소라 결혼합니다</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; }
-        body { font-family: 'Nanum Gothic', sans-serif; margin: 0; padding: 0; color: #444; line-height: 1.6; background: #fdfaf7; }
-        .container { max-width: 480px; margin: 0 auto; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
-        section { width: 100%; padding: 80px 20px; text-align: center; }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nanum Myeongjo', serif;
+            margin: 0;
+            padding: 0;
+            color: #444;
+            line-height: 1.8;
+            background: #f4f4f4;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        section {
+            width: 100%;
+            padding: 80px 20px;
+            text-align: center;
+        }
 
         /* 메인 */
-        .main-visual { 
-            width: 100%; height: 550px; 
-            background: url('main.jpg') center/cover no-repeat; 
-            display: flex; align-items: flex-start; justify-content: center; padding-top: 150px;
+        .main-visual {
+            width: 100%;
+            height: 550px;
+            background: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 50px;
         }
-        .main-text { text-align: center; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
-        .main-text h1 { font-size: 1.8rem; margin-bottom: 10px; font-weight: 400; letter-spacing: 5px; }
 
-        h2 { font-size: 1.1rem; color: #a68d7a; letter-spacing: 3px; margin-bottom: 35px; font-weight: 700; }
+        .main-text {
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .main-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 400;
+            letter-spacing: 5px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            color: #a68d7a;
+            letter-spacing: 3px;
+            margin-bottom: 35px;
+            font-weight: 700;
+        }
 
         /* 갤러리 */
-        .gallery-sec { background-color: #fdfaf7; }
-        .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-        .gallery img { width: 100%; height: auto; object-fit: cover; border-radius: 3px; }
+        .gallery-sec {
+            background-color: #fdfaf7;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 3px;
+        }
 
         /* 지도 */
-        .map-buttons { display: flex; justify-content: center; gap: 10px; margin-top: 30px; }
-        .btn { flex: 1; padding: 12px 0; border-radius: 5px; border: 1px solid #d1c4b9; text-decoration: none; color: #7a6a5e; font-size: 0.85rem; background: #fff; }
+        .map-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 0;
+            border-radius: 5px;
+            border: 1px solid #d1c4b9;
+            text-decoration: none;
+            color: #7a6a5e;
+            font-size: 0.85rem;
+            background: #fff;
+        }
 
         /* 계좌 정보 */
-        .account-sec { background-color: #fdfaf7; padding-bottom: 80px; }
-        .account-group-title { font-size: 0.95rem; color: #887e7e; margin: 25px 0 10px; text-align: left; padding-left: 5px; border-bottom: 1px solid #e2d9d0; padding-bottom: 5px; }
-        .account-box { 
-            background: #fff; padding: 18px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #eee;
-            display: flex; justify-content: space-between; align-items: center; text-align: left;
-        }
-        .account-info { font-size: 0.85rem; color: #555; }
-        .account-info strong { color: #333; font-size: 0.9rem; }
-        .copy-btn { 
-            background: #a68d7a; color: #fff; border: none; padding: 6px 12px; border-radius: 4px; 
-            cursor: pointer; font-size: 0.7rem; font-family: sans-serif;
+        .account-sec {
+            background-color: #fdfaf7;
+            padding-bottom: 80px;
         }
 
-        footer { padding: 40px 0; background: #fff; color: #aaa; font-size: 0.8rem; text-align: center; }
+        .account-group-title {
+            font-size: 0.95rem;
+            color: #887e7e;
+            margin: 25px 0 10px;
+            text-align: left;
+            padding-left: 5px;
+            border-bottom: 1px solid #e2d9d0;
+            padding-bottom: 5px;
+        }
+
+        .account-box {
+            background: #fff;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+
+        .account-info {
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .account-info strong {
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .copy-btn {
+            background: #a68d7a;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.7rem;
+            font-family: sans-serif;
+        }
+
+        /* 연락처 */
+        .contact-sec {
+            background-color: #fff;
+            padding-bottom: 20px;
+        }
+
+        .contact-group {
+            margin-bottom: 30px;
+        }
+
+        .contact-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-title {
+            font-size: 0.9rem;
+            color: #a68d7a;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .contact-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border-bottom: 1px solid #f4f4f4;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-info {
+            text-align: left;
+        }
+
+        .contact-role {
+            font-size: 0.75rem;
+            color: #999;
+            margin-right: 5px;
+        }
+
+        .contact-name {
+            font-size: 0.95rem;
+            color: #444;
+            font-weight: bold;
+        }
+
+        .contact-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-btn {
+            text-decoration: none;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+        }
+
+        .btn-call {
+            background-color: #fdfaf7;
+            color: #a68d7a;
+            border: 1px solid #e2d9d0;
+        }
+
+        .btn-msg {
+            background-color: #fdfaf7;
+            color: #887e7e;
+            border: 1px solid #e2d9d0;
+        }
+
+
+        footer {
+            padding: 40px 0;
+            background: #fff;
+            color: #aaa;
+            font-size: 0.8rem;
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <section class="main-visual">
-        <div class="main-text">
-            <h1>최재웅 & 윤소라</h1>
-            <p>2026. 04. 19. SUN PM 5:00<br>서울대학교 교수회관 야외웨딩</p>
-        </div>
-    </section>
+    <div class="container">
+        <section class="main-visual">
+            <div class="main-text">
+                <h1>최재웅 & 윤소라</h1>
+                <p>2026. 04. 19. SUN PM 5:00<br>서울대학교 교수회관 야외웨딩</p>
+            </div>
+        </section>
 
-    <section class="invitation">
-        <h2>INVITATION</h2>
-        <p>꽃향기 가득한 4월의 어느 날,<br>
-            저희 두 사람이 평생을 약속하려 합니다.<br><br>
-            따뜻한 봄날 저녁, 저희의 새로운 시작을<br>
-            귀한 걸음 하시어 축복해 주시면 감사하겠습니다.</p> </section>
+        <section>
+            <h2>INVITATION</h2>
+            <p>꽃향기 가득한 4월의 어느 날,<br>
+                재웅과 소라, 저희 두 사람이 평생을 약속하려 합니다.<br><br>
+                눈부신 햇살 아래서 맺는 저희의 약속에<br>
+                귀한 걸음 하시어 축복해 주시면 감사하겠습니다.</p>
+        </section>
 
-    <section class="gallery-sec">
-        <h2>GALLERY</h2>
-        <div class="gallery">
-            <img src="photo1.jpg">
-            <img src="photo2.jpg">
-            <img src="photo3.jpg">
-            <img src="photo4.jpg">
-        </div>
-    </section>
+        <section class="gallery-sec">
+            <h2>GALLERY</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=500&q=80" alt="웨딩사진1">
+                <img src="https://images.unsplash.com/photo-1596637513259-2228556900f7?w=500&q=80" alt="웨딩사진2">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fe0e2f?w=500&q=80" alt="웨딩사진3">
+                <img src="https://images.unsplash.com/photo-1507504031982-849130b83f32?w=500&q=80" alt="웨딩사진4">
+            </div>
+        </section>
 
-    <section>
-        <h2>LOCATION</h2>
-        <p style="margin-bottom: 10px;"><strong>서울대학교 교수회관 (65동)</strong></p>
-        <p style="font-size: 0.9rem;">서울 관악구 관악로 1 65동 서울대교수회관</p>
-        <div class="map-buttons">
-            <a href="https://map.kakao.com/link/to/서울대학교 교수회관,37.4593,126.9535" class="btn" target="_blank">카카오맵</a>
-            <a href="https://map.naver.com/v5/search/서울대학교교수회관" class="btn" target="_blank">네이버 지도</a>
-        </div>
-    </section>
+        <section>
+            <h2>LOCATION</h2>
+            <p style="margin-bottom: 10px;"><strong>서울대학교 교수회관 (65동)</strong></p>
+            <p style="font-size: 0.9rem;">서울 관악구 관악로 1 65동 서울대교수회관</p>
+            <div class="map-buttons">
+                <a href="https://map.kakao.com/link/to/서울대학교 교수회관,37.4593,126.9535" class="btn" target="_blank">카카오맵</a>
+                <a href="https://map.naver.com/v5/search/서울대학교교수회관" class="btn" target="_blank">네이버 지도</a>
+            </div>
+        </section>
 
-    <section class="account-sec">
-        <h2>마음 전하실 곳</h2>
-        
-        <div class="account-group-title">신랑측</div>
-        <div class="account-box">
-            <div class="account-info"><strong>신랑 최재웅</strong><br>신한 110-123-456789</div>
-            <button class="copy-btn" onclick="copyAccount('110123456789')">복사</button>
-        </div>
-        <div class="account-box">
-            <div class="account-info"><strong>부 최성대</strong><br>번호를 입력해주세요</div>
-            <button class="copy-btn" onclick="copyAccount('000')">복사</button>
-        </div>
-        <div class="account-box">
-            <div class="account-info"><strong>모 이경자</strong><br>번호를 입력해주세요</div>
-            <button class="copy-btn" onclick="copyAccount('000')">복사</button>
-        </div>
+        <section class="contact-sec">
+            <h2>CONTACT</h2>
 
-        <div class="account-group-title">신부측</div>
-        <div class="account-box">
-            <div class="account-info"><strong>신부 윤소라</strong><br>국민 010-1234-5678</div>
-            <button class="copy-btn" onclick="copyAccount('01012345678')">복사</button>
-        </div>
-        <div class="account-box">
-            <div class="account-info"><strong>부 윤기백</strong><br>번호를 입력해주세요</div>
-            <button class="copy-btn" onclick="copyAccount('000')">복사</button>
-        </div>
-        <div class="account-box">
-            <div class="account-info"><strong>모 박혜영</strong><br>번호를 입력해주세요</div>
-            <button class="copy-btn" onclick="copyAccount('000')">복사</button>
-        </div>
-    </section>
+            <div class="contact-group">
+                <div class="contact-title">신랑측</div>
+                <div class="contact-item">
+                    <div class="contact-info"><span class="contact-role">신랑</span><span class="contact-name">최재웅</span>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="tel:01000000000" class="action-btn btn-call">📞</a>
+                        <a href="sms:01000000000" class="action-btn btn-msg">✉️</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-info"><span class="contact-role">아버지</span><span class="contact-name">최성대</span>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="tel:01000000000" class="action-btn btn-call">📞</a>
+                        <a href="sms:01000000000" class="action-btn btn-msg">✉️</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-info"><span class="contact-role">어머니</span><span class="contact-name">이경자</span>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="tel:01000000000" class="action-btn btn-call">📞</a>
+                        <a href="sms:01000000000" class="action-btn btn-msg">✉️</a>
+                    </div>
+                </div>
+            </div>
 
-    <footer>
-        <p>2026.04.19 최재웅 & 윤소라 드림</p>
-    </footer>
-</div>
+            <div class="contact-group">
+                <div class="contact-title">신부측</div>
+                <div class="contact-item">
+                    <div class="contact-info"><span class="contact-role">신부</span><span class="contact-name">윤소라</span>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="tel:01000000000" class="action-btn btn-call">📞</a>
+                        <a href="sms:01000000000" class="action-btn btn-msg">✉️</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-info"><span class="contact-role">아버지</span><span class="contact-name">윤기백</span>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="tel:01000000000" class="action-btn btn-call">📞</a>
+                        <a href="sms:01000000000" class="action-btn btn-msg">✉️</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-info"><span class="contact-role">어머니</span><span class="contact-name">박혜영</span>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="tel:01000000000" class="action-btn btn-call">📞</a>
+                        <a href="sms:01000000000" class="action-btn btn-msg">✉️</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<script>
-    function copyAccount(number) {
-        navigator.clipboard.writeText(number).then(() => {
-            alert('계좌번호가 복사되었습니다.');
-        });
-    }
-</script>
+        <section class="account-sec">
+            <h2>마음 전하실 곳</h2>
+
+            <div class="account-group-title">신랑측</div>
+            <div class="account-box">
+                <div class="account-info"><strong>신랑 최재웅</strong><br>신한 110-123-456789</div>
+                <button class="copy-btn" onclick="copyAccount('110123456789')">복사</button>
+            </div>
+            <div class="account-box">
+                <div class="account-info"><strong>부 최성대</strong><br>번호를 입력해주세요</div>
+                <button class="copy-btn" onclick="copyAccount('000')">복사</button>
+            </div>
+            <div class="account-box">
+                <div class="account-info"><strong>모 이경자</strong><br>번호를 입력해주세요</div>
+                <button class="copy-btn" onclick="copyAccount('000')">복사</button>
+            </div>
+
+            <div class="account-group-title">신부측</div>
+            <div class="account-box">
+                <div class="account-info"><strong>신부 윤소라</strong><br>국민 010-1234-5678</div>
+                <button class="copy-btn" onclick="copyAccount('01012345678')">복사</button>
+            </div>
+            <div class="account-box">
+                <div class="account-info"><strong>부 윤기백</strong><br>번호를 입력해주세요</div>
+                <button class="copy-btn" onclick="copyAccount('000')">복사</button>
+            </div>
+            <div class="account-box">
+                <div class="account-info"><strong>모 박혜영</strong><br>번호를 입력해주세요</div>
+                <button class="copy-btn" onclick="copyAccount('000')">복사</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>2026.04.19 최재웅 & 윤소라 드림</p>
+        </footer>
+    </div>
+
+    <script>
+        function copyAccount(number) {
+            navigator.clipboard.writeText(number).then(() => {
+                alert('계좌번호가 복사되었습니다.');
+            });
+        }
+    </script>
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
