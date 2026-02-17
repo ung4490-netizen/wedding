@@ -836,8 +836,8 @@
                         {
                             title: '위치 보기',
                             link: {
-                                mobileWebUrl: window.location.origin + window.location.pathname.replace('index.html', '') + 'map_redirect.html',
-                                webUrl: window.location.origin + window.location.pathname.replace('index.html', '') + 'map_redirect.html',
+                                mobileWebUrl: window.location.origin + window.location.pathname.replace(/\/index\.html$/, '/') + (window.location.pathname.endsWith('/') ? '' : '/') + 'map_redirect.html',
+                                webUrl: window.location.origin + window.location.pathname.replace(/\/index\.html$/, '/') + (window.location.pathname.endsWith('/') ? '' : '/') + 'map_redirect.html',
                             },
                         },
                     ],
