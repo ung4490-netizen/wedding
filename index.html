@@ -2,12 +2,12 @@
 <html lang="ko">
 
 <head>
-    <meta property="og:title" content="최재웅 & 윤소라 결혼합니다">
+    <meta property="og:title" content="최재웅 ♥ 윤소라 결혼합니다">
     <meta property="og:description" content="2026년 4월 19일 오후 5시, 서울대 교수회관">
     <meta property="og:image" content="https://ung4490-netizen.github.io/wedding/og_image.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>최재웅 & 윤소라 결혼합니다</title>
+    <title>최재웅 ♥ 윤소라 결혼합니다</title>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -327,6 +327,9 @@
             color: #333;
         }
     </style>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
+        integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2txfYR9bGr4UwZHMz0TW-Z"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -377,6 +380,12 @@
             <div class="map-buttons">
                 <a href="https://map.kakao.com/link/to/서울대학교 교수회관,37.4593,126.9535" class="btn" target="_blank">카카오맵</a>
                 <a href="https://map.naver.com/v5/search/서울대학교교수회관" class="btn" target="_blank">네이버 지도</a>
+            </div>
+            <div style="margin-top: 10px;">
+                <button onclick="shareKakao()" class="btn"
+                    style="width: 100%; background-color: #FEE500; color: #3c1e1e; border: none; font-weight: bold; cursor: pointer;">
+                    <i class="xi-kakaotalk"></i> 카카오톡으로 위치 공유하기
+                </button>
             </div>
 
             <div class="transport-info">
@@ -678,6 +687,52 @@
                 });
             }
             isPlaying = !isPlaying;
+        }
+
+        // 카카오톡 공유 기능
+        // TODO: 실제 JavaScript 키를 입력해야 합니다.
+        try {
+            Kakao.init('YOUR_KAKAO_JAVASCRIPT_KEY');
+        } catch (e) {
+            console.error("Kakao Init Failed", e);
+        }
+
+        function shareKakao() {
+            try {
+                Kakao.Share.sendDefault({
+                    objectType: 'location',
+                    address: '서울 관악구 관악로 1 65동',
+                    addressTitle: '서울대학교 교수회관',
+                    content: {
+                        title: '최재웅 ♥ 윤소라 결혼합니다',
+                        description: '2026년 4월 19일 오후 5시, 서울대학교 교수회관 야외웨딩',
+                        imageUrl: 'https://ung4490-netizen.github.io/wedding/og_image.jpg', // 실제 호스팅 주소에 맞게 변경 필요
+                        link: {
+                            mobileWebUrl: window.location.href,
+                            webUrl: window.location.href,
+                        },
+                    },
+                    buttons: [
+                        {
+                            title: '청첩장 보기',
+                            link: {
+                                mobileWebUrl: window.location.href,
+                                webUrl: window.location.href,
+                            },
+                        },
+                        {
+                            title: '위치 보기',
+                            link: {
+                                mobileWebUrl: 'https://map.kakao.com/link/map/서울대학교 교수회관,37.4593,126.9535',
+                                webUrl: 'https://map.kakao.com/link/map/서울대학교 교수회관,37.4593,126.9535',
+                            },
+                        },
+                    ],
+                });
+            } catch (e) {
+                alert('카카오톡 공유 기능을 사용하려면 JavaScript 키 설정이 필요합니다.');
+                console.error(e);
+            }
         }
     </script>
 
