@@ -806,6 +806,10 @@
         }
 
         function shareKakao() {
+            // 현재 도메인이 등록되어 있는지 확인하기 위해 알림창에 도메인 표시
+            // 나중에 삭제 가능
+            // console.log("Current Origin: " + window.location.origin);
+
             try {
                 Kakao.Share.sendDefault({
                     objectType: 'location',
@@ -838,7 +842,7 @@
                     ],
                 });
             } catch (e) {
-                alert('카카오톡 공유 기능을 사용하려면 JavaScript 키 설정이 필요합니다.\n\n오류 내용:\n' + e);
+                alert('카카오톡 공유 기능을 사용하려면 JavaScript 키 설정이 필요합니다.');
                 console.error(e);
             }
         }
