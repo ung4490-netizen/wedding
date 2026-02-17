@@ -327,9 +327,7 @@
             color: #333;
         }
     </style>
-    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
-        integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2txfYR9bGr4UwZHMz0TW-Z"
-        crossorigin="anonymous"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 </head>
 
 <body>
@@ -840,7 +838,7 @@
                     ],
                 });
             } catch (e) {
-                alert('카카오톡 공유 기능을 사용하려면 JavaScript 키 설정이 필요합니다.');
+                alert('카카오톡 공유 기능을 사용하려면 JavaScript 키 설정이 필요합니다.\n\n오류 내용:\n' + e);
                 console.error(e);
             }
         }
