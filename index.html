@@ -80,7 +80,11 @@
         }
 
         .invitation-info {
-            margin-bottom: 40px;
+            margin: 0 auto 50px;
+            width: 85%;
+            padding: 30px 0;
+            border-top: 1px solid #e2d9d0;
+            border-bottom: 1px solid #e2d9d0;
         }
 
         .invitation-names {
@@ -366,6 +370,10 @@
             <h2>LOCATION</h2>
             <p style="margin-bottom: 10px;"><strong>서울대학교 교수회관 (65동)</strong></p>
             <p style="font-size: 0.9rem;">서울 관악구 관악로 1 65동 서울대교수회관</p>
+            <div class="map-image-container" style="margin: 20px 0;">
+                <img src="snu_map_final.jpg" alt="서울대학교 지도"
+                    style="width: 100%; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            </div>
             <div class="map-buttons">
                 <a href="https://map.kakao.com/link/to/서울대학교 교수회관,37.4593,126.9535" class="btn" target="_blank">카카오맵</a>
                 <a href="https://map.naver.com/v5/search/서울대학교교수회관" class="btn" target="_blank">네이버 지도</a>
@@ -457,7 +465,7 @@
         <section class="account-sec">
             <h2 style="margin-bottom: 10px;">마음 전하실 곳</h2>
             <div style="text-align: center; color: #887e7e; font-size: 0.85rem; margin-bottom: 25px;">
-                * 화환은 정중히 사양합니다 *
+                * 화환은 정중히 사양하오니 양해 부탁드립니다. *
             </div>
 
             <div class="account-group-title">신랑측</div>
@@ -514,11 +522,93 @@
         </footer>
     </div>
 
+    <!-- 이미지 확대 모달 -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <style>
+        /* 모달 스타일 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close-modal:hover,
+        .close-modal:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 갤러리 이미지 커서 변경 */
+        .gallery img {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            opacity: 0.8;
+        }
+    </style>
+
     <script>
         function copyAccount(number) {
             navigator.clipboard.writeText(number).then(() => {
                 alert('계좌번호가 복사되었습니다.');
             });
+        }
+
+        // 모달 관련 스크립트
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+        const galleryImages = document.querySelectorAll(".gallery img");
+        const span = document.getElementsByClassName("close-modal")[0];
+
+        galleryImages.forEach(img => {
+            img.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        });
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        modal.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
         }
     </script>
 
