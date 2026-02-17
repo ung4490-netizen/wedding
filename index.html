@@ -381,12 +381,6 @@
                 <a href="https://map.kakao.com/link/to/서울대학교 교수회관,37.4593,126.9535" class="btn" target="_blank">카카오맵</a>
                 <a href="https://map.naver.com/v5/search/서울대학교교수회관" class="btn" target="_blank">네이버 지도</a>
             </div>
-            <div style="margin-top: 10px;">
-                <button onclick="shareKakao()" class="btn"
-                    style="width: 100%; background-color: #FEE500; color: #3c1e1e; border: none; font-weight: bold; cursor: pointer;">
-                    <i class="xi-kakaotalk"></i> 카카오톡으로 위치 공유하기
-                </button>
-            </div>
 
             <div class="transport-info">
                 <div class="transport-item">
@@ -524,6 +518,15 @@
             </div>
 
 
+        </section>
+
+        <section class="share-sec" style="background-color: #fdfaf7; padding-bottom: 50px;">
+            <div style="width: 85%; margin: 0 auto;">
+                <button onclick="shareKakao()" class="btn"
+                    style="width: 100%; background-color: #FEE500; color: #3c1e1e; border: none; font-weight: bold; cursor: pointer; padding: 15px 0; font-size: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <i class="xi-kakaotalk"></i> 카카오톡으로 청첩장 공유하기
+                </button>
+            </div>
         </section>
 
         <footer>
@@ -799,7 +802,7 @@
         // 카카오톡 공유 기능
         // TODO: 실제 JavaScript 키를 입력해야 합니다.
         try {
-            Kakao.init('YOUR_KAKAO_JAVASCRIPT_KEY');
+            Kakao.init('c4726c60a8c16543f69f934cae080d2e');
         } catch (e) {
             console.error("Kakao Init Failed", e);
         }
