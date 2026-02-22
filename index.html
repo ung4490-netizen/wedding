@@ -641,7 +641,7 @@
         <source src="bgm.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <button id="musicBtn" class="floating-btn playing" onclick="toggleMusic()">�</button>
+    <button id="musicBtn" class="floating-btn playing" onclick="toggleMusic()">&#128266;</button>
 
     <style>
         /* 플로팅 음악 버튼 */
@@ -787,12 +787,12 @@
         // 첫 사용자 인터랙션 시 자동 재생 (모바일 정책 대응)
         function startMusicOnFirstInteraction() {
             bgm.play().then(() => {
-                musicBtn.textContent = "🔊";
+                musicBtn.innerHTML = "&#128266;";
                 musicBtn.classList.add("playing");
             }).catch(error => {
                 console.log("Auto play failed: " + error);
                 isPlaying = false;
-                musicBtn.textContent = "🔇";
+                musicBtn.innerHTML = "&#128263;";
                 musicBtn.classList.remove("playing");
             });
             document.removeEventListener('click', startMusicOnFirstInteraction);
@@ -804,11 +804,11 @@
         function toggleMusic() {
             if (isPlaying) {
                 bgm.pause();
-                musicBtn.textContent = "🔇"; // 소리 끔 아이콘
+                musicBtn.innerHTML = "&#128263;"; // 소리 끔 아이콘
                 musicBtn.classList.remove("playing");
             } else {
                 bgm.play().then(() => {
-                    musicBtn.textContent = "🔊"; // 소리 켬 아이콘
+                    musicBtn.innerHTML = "&#128266;"; // 소리 켬 아이콘
                     musicBtn.classList.add("playing");
                 }).catch(error => {
                     console.log("Audio playback failed: " + error);
