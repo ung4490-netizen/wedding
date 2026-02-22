@@ -352,7 +352,8 @@
             <p>꽃향기 가득한 4월의 어느 날,<br>
                 저희 두 사람이 평생을 약속하려 합니다.<br><br>
                 따뜻한 봄날 저녁, 저희의 새로운 시작을<br>
-                귀한 걸음 하시어 축복해 주시면 감사하겠습니다.</p>
+                귀한 걸음 하시어 축복해 주시면<br>
+                감사하겠습니다.</p>
 
         </section>
 
@@ -640,7 +641,7 @@
         <source src="bgm.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <button id="musicBtn" class="floating-btn" onclick="toggleMusic()">🔇</button>
+    <button id="musicBtn" class="floating-btn playing" onclick="toggleMusic()">�</button>
 
     <style>
         /* 플로팅 음악 버튼 */
@@ -781,7 +782,24 @@
         // 배경음악 관련 스크립트
         const bgm = document.getElementById("bgm");
         const musicBtn = document.getElementById("musicBtn");
-        let isPlaying = false;
+        let isPlaying = true; // 기본값: 재생 중
+
+        // 첫 사용자 인터랙션 시 자동 재생 (모바일 정책 대응)
+        function startMusicOnFirstInteraction() {
+            bgm.play().then(() => {
+                musicBtn.textContent = "🔊";
+                musicBtn.classList.add("playing");
+            }).catch(error => {
+                console.log("Auto play failed: " + error);
+                isPlaying = false;
+                musicBtn.textContent = "🔇";
+                musicBtn.classList.remove("playing");
+            });
+            document.removeEventListener('click', startMusicOnFirstInteraction);
+            document.removeEventListener('touchstart', startMusicOnFirstInteraction);
+        }
+        document.addEventListener('click', startMusicOnFirstInteraction);
+        document.addEventListener('touchstart', startMusicOnFirstInteraction);
 
         function toggleMusic() {
             if (isPlaying) {
@@ -794,7 +812,6 @@
                     musicBtn.classList.add("playing");
                 }).catch(error => {
                     console.log("Audio playback failed: " + error);
-                    alert("재생 버튼을 다시 눌러주세요.");
                 });
             }
             isPlaying = !isPlaying;
