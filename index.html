@@ -154,93 +154,170 @@
             padding-bottom: 80px;
         }
 
-        .account-group-title {
+        .account-wrap {
+            margin: 0 auto 15px;
+            width: 85%;
+            font-family: inherit;
+            display: flex;
+            gap: 10px;
+        }
+
+        .account-group {
+            flex: 1;
+        }
+
+        .account-toggle-btn {
+            background-color: #fdfaf7;
+            color: #7a6a5e;
+            border: 1px solid #d1c4b9;
+            padding: 12px 10px;
+            width: 100%;
+            border-radius: 5px;
             font-size: 0.95rem;
-            color: #887e7e;
-            margin: 25px 0 10px;
-            text-align: left;
-            padding-left: 5px;
-            border-bottom: 1px solid #e2d9d0;
-            padding-bottom: 5px;
+            cursor: pointer;
+            font-family: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+        }
+
+        .account-toggle-btn:hover {
+            background-color: #f5eee8;
+        }
+
+        .account-container {
+            margin-top: 10px;
+            animation: fadeIn 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .account-box {
             background: #fff;
-            padding: 18px;
+            padding: 15px 10px;
             border-radius: 8px;
             margin-bottom: 10px;
-            border: 1px solid #eee;
+            border: 1px dashed #d1c4b9;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            text-align: left;
+            text-align: center;
+            word-break: keep-all;
         }
 
         .account-info {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #555;
+            margin-bottom: 8px;
         }
 
         .account-info strong {
             color: #333;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .copy-btn {
             background: #a68d7a;
             color: #fff;
             border: none;
-            padding: 6px 12px;
+            padding: 5px 12px;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 0.7rem;
-            font-family: sans-serif;
+            font-size: 0.75rem;
+            font-family: inherit;
         }
 
         /* 연락처 */
-        .contact-sec {
+        .contact-wrap {
+            margin-top: 40px;
+        }
+
+        .contact-toggle-btn {
             background-color: #fdfaf7;
-            padding-bottom: 20px;
+            color: #7a6a5e;
+            border: 1px solid #d1c4b9;
+            padding: 12px 20px;
+            width: 80%;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            margin: 15px auto 0;
+            font-family: inherit;
+            display: block;
+            transition: all 0.3s;
+        }
+
+        .contact-toggle-btn:hover {
+            background-color: #f5eee8;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .parents-contact-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 10px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .contact-group {
-            margin-bottom: 30px;
+            flex: 1;
+            background: transparent;
+            padding: 5px;
+            box-sizing: border-box;
         }
 
-        .contact-group:last-child {
-            margin-bottom: 0;
-        }
 
-        .contact-title {
-            font-size: 0.9rem;
-            color: #a68d7a;
-            margin-bottom: 15px;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
 
         .contact-item {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            padding: 12px 20px;
-            border-bottom: 1px solid #f4f4f4;
+            padding: 12px 0;
+            border-bottom: 1px dashed #d1c4b9;
         }
 
         .contact-item:last-child {
             border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .contact-item:first-child {
+            padding-top: 0;
         }
 
         .contact-info {
-            text-align: left;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 100%;
         }
 
         .contact-role {
             font-size: 0.75rem;
             color: #999;
             margin-right: 5px;
-            display: inline-block;
-            width: 45px;
         }
 
         .contact-name {
@@ -251,32 +328,30 @@
 
         .contact-actions {
             display: flex;
-            gap: 8px;
+            gap: 10px;
+            justify-content: center;
         }
 
         .action-btn {
             text-decoration: none;
-            display: inline-block;
-            width: 40px;
-            height: 40px;
+            display: inline-flex;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
-            display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1rem;
             transition: all 0.2s;
+            background-color: #fff;
+            border: 1px solid #e2d9d0;
         }
 
         .btn-call {
-            background-color: #fdfaf7;
             color: #a68d7a;
-            border: 1px solid #e2d9d0;
         }
 
         .btn-msg {
-            background-color: #fdfaf7;
             color: #887e7e;
-            border: 1px solid #e2d9d0;
         }
 
         footer {
@@ -355,6 +430,73 @@
                 귀한 걸음 하시어 축복해 주시면<br>
                 감사하겠습니다.</p>
 
+            <div class="contact-wrap">
+                <div class="contact-container">
+                    <div class="contact-group">
+                        <div class="contact-item">
+                            <div class="contact-info"><span class="contact-role">신랑</span><span
+                                    class="contact-name">최재웅</span></div>
+                            <div class="contact-actions">
+                                <a href="tel:01089652496" class="action-btn btn-call">📞</a>
+                                <a href="sms:01089652496" class="action-btn btn-msg">✉️</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-group">
+                        <div class="contact-item">
+                            <div class="contact-info"><span class="contact-role">신부</span><span
+                                    class="contact-name">윤소라</span></div>
+                            <div class="contact-actions">
+                                <a href="tel:01062535432" class="action-btn btn-call">📞</a>
+                                <a href="sms:01062535432" class="action-btn btn-msg">✉️</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="contact-toggle-btn" onclick="toggleContact()">혼주에게 연락하기 &#9660;</button>
+                <div class="parents-contact-container" id="contactContainer" style="display: none;">
+                    <div class="contact-group">
+                        <div class="contact-item">
+                            <div class="contact-info"><span class="contact-role">아버지</span><span
+                                    class="contact-name">최성대</span></div>
+                            <div class="contact-actions">
+                                <a href="tel:01066137913" class="action-btn btn-call">📞</a>
+                                <a href="sms:01066137913" class="action-btn btn-msg">✉️</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-info"><span class="contact-role">어머니</span><span
+                                    class="contact-name">이경자</span></div>
+                            <div class="contact-actions">
+                                <a href="tel:01091477913" class="action-btn btn-call">📞</a>
+                                <a href="sms:01091477913" class="action-btn btn-msg">✉️</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-group">
+                        <div class="contact-item">
+                            <div class="contact-info"><span class="contact-role">아버지</span><span
+                                    class="contact-name">윤기백</span></div>
+                            <div class="contact-actions">
+                                <a href="tel:01086189002" class="action-btn btn-call">📞</a>
+                                <a href="sms:01086189002" class="action-btn btn-msg">✉️</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-info"><span class="contact-role">어머니</span><span
+                                    class="contact-name">박혜영</span></div>
+                            <div class="contact-actions">
+                                <a href="tel:01094451002" class="action-btn btn-call">📞</a>
+                                <a href="sms:01094451002" class="action-btn btn-msg">✉️</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <section class="gallery-sec">
@@ -407,65 +549,7 @@
             </div>
         </section>
 
-        <section class="contact-sec">
-            <h2>CONTACT</h2>
 
-            <div class="contact-group">
-                <div class="contact-title">신랑측</div>
-                <div class="contact-item">
-                    <div class="contact-info"><span class="contact-role">신랑</span><span class="contact-name">최재웅</span>
-                    </div>
-                    <div class="contact-actions">
-                        <a href="tel:01089652496" class="action-btn btn-call">📞</a>
-                        <a href="sms:01089652496" class="action-btn btn-msg">✉️</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-info"><span class="contact-role">아버지</span><span class="contact-name">최성대</span>
-                    </div>
-                    <div class="contact-actions">
-                        <a href="tel:01066137913" class="action-btn btn-call">📞</a>
-                        <a href="sms:01066137913" class="action-btn btn-msg">✉️</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-info"><span class="contact-role">어머니</span><span class="contact-name">이경자</span>
-                    </div>
-                    <div class="contact-actions">
-                        <a href="tel:01091477913" class="action-btn btn-call">📞</a>
-                        <a href="sms:01091477913" class="action-btn btn-msg">✉️</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-group">
-                <div class="contact-title">신부측</div>
-                <div class="contact-item">
-                    <div class="contact-info"><span class="contact-role">신부</span><span class="contact-name">윤소라</span>
-                    </div>
-                    <div class="contact-actions">
-                        <a href="tel:01062535432" class="action-btn btn-call">📞</a>
-                        <a href="sms:01062535432" class="action-btn btn-msg">✉️</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-info"><span class="contact-role">아버지</span><span class="contact-name">윤기백</span>
-                    </div>
-                    <div class="contact-actions">
-                        <a href="tel:01086189002" class="action-btn btn-call">📞</a>
-                        <a href="sms:01086189002" class="action-btn btn-msg">✉️</a>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-info"><span class="contact-role">어머니</span><span class="contact-name">박혜영</span>
-                    </div>
-                    <div class="contact-actions">
-                        <a href="tel:01094451002" class="action-btn btn-call">📞</a>
-                        <a href="sms:01094451002" class="action-btn btn-msg">✉️</a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section class="account-sec">
             <h2 style="margin-bottom: 10px;">마음 전하실 곳</h2>
@@ -473,50 +557,62 @@
                 * 화환은 정중히 사양하오니 양해 부탁드립니다. *
             </div>
 
-            <div class="account-group-title">신랑측</div>
-            <div class="account-box">
-                <div class="account-info">
-                    <span class="contact-role">신랑</span><span class="contact-name">최재웅</span><br>
-                    토스뱅크 1000-9297-9939
+            <div class="account-wrap">
+                <div class="account-group">
+                    <button class="account-toggle-btn" onclick="toggleAccount('groom', this)">신랑측
+                        <span>&#9660;</span></button>
+                    <div class="account-container" id="accountGroom" style="display: none;">
+                        <div class="account-box">
+                            <div class="account-info">
+                                <span class="contact-role">신랑</span><span class="contact-name">최재웅</span><br>
+                                토스뱅크 1000-9297-9939
+                            </div>
+                            <button class="copy-btn" onclick="copyAccount('100092979939')">복사</button>
+                        </div>
+                        <div class="account-box">
+                            <div class="account-info">
+                                <span class="contact-role">아버지</span><span class="contact-name">최성대</span><br>
+                                국민은행 485501-01-222768
+                            </div>
+                            <button class="copy-btn" onclick="copyAccount('48550101222768')">복사</button>
+                        </div>
+                        <div class="account-box">
+                            <div class="account-info">
+                                <span class="contact-role">어머니</span><span class="contact-name">이경자</span><br>
+                                신한은행 110-043-644307
+                            </div>
+                            <button class="copy-btn" onclick="copyAccount('110043644307')">복사</button>
+                        </div>
+                    </div>
                 </div>
-                <button class="copy-btn" onclick="copyAccount('100092979939')">복사</button>
-            </div>
-            <div class="account-box">
-                <div class="account-info">
-                    <span class="contact-role">아버지</span><span class="contact-name">최성대</span><br>
-                    국민은행 485501-01-222768
-                </div>
-                <button class="copy-btn" onclick="copyAccount('48550101222768')">복사</button>
-            </div>
-            <div class="account-box">
-                <div class="account-info">
-                    <span class="contact-role">어머니</span><span class="contact-name">이경자</span><br>
-                    신한은행 110-043-644307
-                </div>
-                <button class="copy-btn" onclick="copyAccount('110043644307')">복사</button>
-            </div>
 
-            <div class="account-group-title">신부측</div>
-            <div class="account-box">
-                <div class="account-info">
-                    <span class="contact-role">신부</span><span class="contact-name">윤소라</span><br>
-                    신한은행 110-470-432374
+                <div class="account-group">
+                    <button class="account-toggle-btn" onclick="toggleAccount('bride', this)">신부측
+                        <span>&#9660;</span></button>
+                    <div class="account-container" id="accountBride" style="display: none;">
+                        <div class="account-box">
+                            <div class="account-info">
+                                <span class="contact-role">신부</span><span class="contact-name">윤소라</span><br>
+                                신한은행 110-470-432374
+                            </div>
+                            <button class="copy-btn" onclick="copyAccount('110470432374')">복사</button>
+                        </div>
+                        <div class="account-box">
+                            <div class="account-info">
+                                <span class="contact-role">아버지</span><span class="contact-name">윤기백</span><br>
+                                국민은행 9164-0101-028105
+                            </div>
+                            <button class="copy-btn" onclick="copyAccount('91640101028105')">복사</button>
+                        </div>
+                        <div class="account-box">
+                            <div class="account-info">
+                                <span class="contact-role">어머니</span><span class="contact-name">박혜영</span><br>
+                                신한은행 110-350-708760
+                            </div>
+                            <button class="copy-btn" onclick="copyAccount('110350708760')">복사</button>
+                        </div>
+                    </div>
                 </div>
-                <button class="copy-btn" onclick="copyAccount('110470432374')">복사</button>
-            </div>
-            <div class="account-box">
-                <div class="account-info">
-                    <span class="contact-role">아버지</span><span class="contact-name">윤기백</span><br>
-                    국민은행 9164-0101-028105
-                </div>
-                <button class="copy-btn" onclick="copyAccount('91640101028105')">복사</button>
-            </div>
-            <div class="account-box">
-                <div class="account-info">
-                    <span class="contact-role">어머니</span><span class="contact-name">박혜영</span><br>
-                    신한은행 110-350-708760
-                </div>
-                <button class="copy-btn" onclick="copyAccount('110350708760')">복사</button>
             </div>
 
 
@@ -684,6 +780,31 @@
     </style>
 
     <script>
+        function toggleContact() {
+            const container = document.getElementById('contactContainer');
+            const btn = document.querySelector('.contact-toggle-btn');
+            if (container.style.display === 'none') {
+                container.style.display = 'flex';
+                btn.innerHTML = '혼주에게 연락하기 &#9650;';
+            } else {
+                container.style.display = 'none';
+                btn.innerHTML = '혼주에게 연락하기 &#9660;';
+            }
+        }
+
+        function toggleAccount(side, btn) {
+            const container = document.getElementById(side === 'groom' ? 'accountGroom' : 'accountBride');
+            const sideText = side === 'groom' ? '신랑측 ' : '신부측 ';
+
+            if (container.style.display === 'none') {
+                container.style.display = 'flex';
+                btn.innerHTML = sideText + '<span>&#9650;</span>';
+            } else {
+                container.style.display = 'none';
+                btn.innerHTML = sideText + '<span>&#9660;</span>';
+            }
+        }
+
         function copyAccount(number) {
             navigator.clipboard.writeText(number).then(() => {
                 alert('계좌번호가 복사되었습니다.');
